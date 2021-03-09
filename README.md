@@ -6,7 +6,7 @@ Store credit API
 Projeto para listar o score de cada pessoa
 </h4>
 
-<p >Este projeto tem a ideia de listagem de cada usuário  pelo CPF é as tecnologias escolhidas para esta aplicação foram as seguintes:</p>
+<p >Este projeto tem como ideia a listagem de cada usuário  pelo CPF, as tecnologias escolhidas para esta aplicação foram as seguintes:</p>
 
 
 ## Tecnologias
