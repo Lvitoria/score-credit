@@ -22,9 +22,9 @@ Projeto para listar o score de cada pessoa
 
 ## Tecnologias escolhidas
 
-<p>A tecnologia está sempre em constante evolução por isso cada vez mais é difícil escolher a melhor ou a mais rápida, mas para este projeto foi escolhido o mongo por sua facilidade e velocidade na leitura dos seus dados, foi utilizado o Laravel para conexão do mongo e tratamento dos seus dados, O Node.js foi utilizado como se fosse um <i>Mediator</i> orquestrando as respostas entregada pela api feita em laravel, mas para acelerar a sua velocidade foi utilizado o banco Redis, O Redis é famoso em sua armazenação em memória tornando uma aplicação muito mais rápida.</p>
+<p>As tecnologias estão em constante evolução, por isso cada vez mais a tarefa de definir a melhor ou a mais veloz ferramenta vem se tornando difícil ou mesmo quase impossível em meio a tantas possibilidades, mas para este projeto foi escolhido o mongo por sua facilidade e velocidade na leitura dos seus dados, foi utilizado o Laravel para conexão do mongo e tratamento dos seus dados. O Node.js foi utilizado como se fosse um 'Mediator' orquestrando as respostas entregada pela api feita em laravel, mas para acelerar a sua velocidade foi utilizado o banco Redis. O Redis é famoso por sua armazenação em memória, tornando uma aplicação muito mais rápida, ja que 'cacheia' as buscas, fazendo as requisições seguintes serem muito mais ágeis.</p>
 
-<p>Portanto toda vez que a aplicação é chamada pela primeira ela vai até o laravel com o mongo para buscar aquilo que o cliente esta pedindo, já na segunda vez que o cliente chamar o serviço de novo com o mesmo payload o Node.js invés de ir até o laravel para buscar as informações ele vai acessará redis entregando muito mais rápido a informação. Como ilustra a imagem a baixo.</p>
+<p>Portanto, o fluxo funciona da seguinte forma: toda vez que a aplicação é chamada pela primeira ela vai até o laravel com o mongo para buscar aquilo que o cliente esta solicitando, já na segunda vez que o cliente chamar o serviço, com o mesmo payload, o Node.js não fará mais o mesmo trajeto, de ir até o laravel para buscar as informações, ele acessará Redis entregando muito mais rápido a informação. Como ilustra a imagem a baixo.</p>
 
 
 ![alt text](https://github.com/Lvitoria/score-credit/blob/master/fluxo.png?raw=true)
@@ -41,6 +41,6 @@ Projeto para listar o score de cada pessoa
 
 ### Observações
 
- A coleção com o nome `user` são referentes a tabela usuários que criei, pois todos os usuários que quiserem ver as informações dos endpoints `baseB` e `baseC` tem que estar autenticados então estes endpoints tem que passar um token para eles, reforçando assim a segurança.
+ A coleção com o nome 'user' são referentes a tabela usuários que criei, pois todos os usuários que quiserem ver as informações dos endpoints `baseB` e `baseC` tem que estar autenticados então estes endpoints devem passar um token para eles, reforçando assim a segurança.
 
-A criptografia utilizada foi o base 64, mas o mais correto seria criar uma própria criptografia, mas devido ao tempo não consegui criar um algoritmo próprio de criptografia.
+A criptografia utilizada foi o base 64, porém, a intenção inicial era criar uma criptografia própria para maior segurança, e devido ao curto período de tempo, não foi possível criar um algoritmo próprio para tal
