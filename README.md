@@ -33,7 +33,7 @@ Projeto para listar o score de cada pessoa
 ## Instalando e rodando os projetos
 
 1. start o Redis e o mongo
-2. entre na pasta credit e execute o comando  ```composer install``` espere um pouco, depois crie o arquivo `.env` que tem como exemplo `.env.example` e para rodar use o comando `php artisan serve`
+2. entre na pasta credit e execute o comando  `` `composer install` `` espere um pouco, depois crie o arquivo `.env` que tem como exemplo `.env.example` e para rodar use o comando `php artisan serve`
 3. Crie as collections no mongo com o comando `php artisan migrate`
 4. entre na pasta scoreOrganizet e execute o comando  `npm i` espere um pouco, depois cria o arquivo `.env` que tem como exemplo `.env.example` e para rodar use o comando `npm run dev`
 5. Na raiz do projeto vai ter a collection com todas os endpoints, pode importar para seu postman ou insonia.
